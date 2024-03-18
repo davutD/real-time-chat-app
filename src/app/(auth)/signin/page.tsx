@@ -10,7 +10,7 @@ interface pageProps {}
 const page: FC<pageProps> = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
-  const loginWithGoogle = async () => {
+  async function loginWithGoogle() {
     setIsLoading(true)
     try {
       await signIn('google')
